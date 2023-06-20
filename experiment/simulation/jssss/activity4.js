@@ -44,5 +44,4 @@ function verify_act4() {
     act4_table = new Table(act4_table_headings, act4_table_data);
     act4_table.draw();
 }
-activity4();
 //# sourceMappingURL=activity4.js.map
