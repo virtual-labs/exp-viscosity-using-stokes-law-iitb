@@ -44,7 +44,7 @@ function verify_act5() {
         alert(`please check ${act5_table_headings[6]}`);
         return;
     }
-    alert("all values are right!!");
+    alert("all v alues are right!!");
     act5_table_headings.pop();
     act5_table = new Table(act5_table_headings, act5_table_data);
     act5_table.draw();
