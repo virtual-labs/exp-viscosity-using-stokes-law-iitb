@@ -5,7 +5,7 @@ function activity4() {
     pp.clearrightpannel();
     pp.addoffcanvas(3);
     load_act4_table();
-    pp.showtitle("To determine viscosity using Stokes law", 3);
+    pp.showtitle(`<p id="exp-title">To determine viscosity using Stokes law</p>`, 3);
     let activity5_formulae = `
         <p>Length of Column (L) = 100 cm</p>
 
@@ -19,10 +19,11 @@ function activity4() {
 
     `;
     show_panel(3);
-    pp.showdescription(activity5_formulae, 3);
+    // pp.showdescription(activity5_formulae, 3);
+    pp.showdescription(`<div style="background-color: #f4ccccff; border-radius: 10px; border: black; padding: 3%; font-weight: 500; font-size: calc(1vw + 5px);">${activity5_formulae}</div>`, 3);
 }
 function load_act4_table() {
-    act4_table_headings = ["Sr No.", "Length of the column L (cm)", "Diameter of the steel ball Dp (cm)", "Time of travel between tow marks (t)", "Ultimate setting velocity Ut (cm/sec)", "Viscosity &mue; (poise)", "check"];
+    act4_table_headings = ["Sr No.", "Length of the column L (cm)", "Diameter of the steel ball Dp (cm)", "Time of travel between tow marks (t)", "Ultimate setting velocity Ut (cm/sec)", "Viscosity &mu; (poise)", "check"];
     let verify_row = [["1", "100", "0.30", "5.52", `<input type="text"  id="inp-1">`, `<input type="text"  id="inp-2">`, `<input type="submit" class="btn btn-primary" onclick="verify_act4();">`]];
     act4_table = new Table(act4_table_headings, verify_row);
     pp.addtoleftpannel(act4_table.template);
@@ -31,6 +32,8 @@ function load_act4_table() {
 function verify_act4() {
     let val1 = document.getElementById(`inp-1`);
     let val2 = document.getElementById(`inp-2`);
+    console.log(parseFloat(act4_table_data[0][4]));
+    console.log(parseFloat(act4_table_data[0][5]));
     if (!verify_values(parseFloat(val1.value), parseFloat(act4_table_data[0][4]))) {
         alert(`please correct Ut value!!`);
         return;

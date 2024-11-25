@@ -105,10 +105,10 @@ function a1_draw_all_components() {
     var sq = new Chemistry.Custome_image(glass_column, new Chemistry.Point(300, 500), 205, 393, canvas);
     sq.name = "glass_column";
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(steel_ball, new Chemistry.Point(700, 500), 140, 140, canvas);
+    var sq = new Chemistry.Custome_image(steel_ball, new Chemistry.Point(900, 500), 140, 140, canvas);
     sq.name = "steel_ball";
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(timer, new Chemistry.Point(1100, 500), 260, 224, canvas);
+    var sq = new Chemistry.Custome_image(timer, new Chemistry.Point(1400, 500), 260, 224, canvas);
     sq.name = "timer";
     scene.add(sq);
 }
@@ -150,10 +150,11 @@ function load_higlighted_images() {
         [timer, timer]
     ];
     a1_labels = [
-        new Chemistry.Text("glass_column", new Chemistry.Point(300, 100), canvas),
-        new Chemistry.Text("steel_ball", new Chemistry.Point(700, 100), canvas),
-        new Chemistry.Text("timer", new Chemistry.Point(1100, 100), canvas),
+        new Chemistry.Text("glass_column", new Chemistry.Point(300, 250), canvas),
+        new Chemistry.Text("steel_ball", new Chemistry.Point(900, 350), canvas),
+        new Chemistry.Text("timer", new Chemistry.Point(1400, 350), canvas),
     ];
+    a1_labels.map(label => label.font = '22px Arial');
 }
 function a1_random_questions() {
     arrayofrandquestion = [];

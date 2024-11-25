@@ -1,1 +1,1 @@
-## Experiment name
+## To determine viscosity using Stokes law
